@@ -2,6 +2,7 @@
     opacity: 0;
     font-size: 5vw;
     transition: opacity 3s ease-in;
+    user-select: none;
 }
 
 .Title.active {

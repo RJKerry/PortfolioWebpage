@@ -1,0 +1,35 @@
+.NameHeader {
+    bottom: 100%;
+    left: 50%;
+    translate: -50% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    position: absolute;
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.NameHeader.active {
+    transform: translateY(100%);
+}
+
+.Role {
+    position: absolute;
+    font-size: 2vw;
+    top: 100%;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    transform-origin: 0% 50%;
+    perspective: 0;
+    transform: rotateX(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.Role.active {
+    opacity: 1;
+    transform: rotateX(0deg);
+    perspective: 1000px;
+}

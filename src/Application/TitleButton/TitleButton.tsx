@@ -1,8 +1,10 @@
 import clsx from "clsx";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./TitleButton.css";
+import { InitContext } from "@Application";
 
 const TitleButton=()=>{
+    const { setAppInitialized } = useContext(InitContext);
     const [active, setActive] = useState(false);
     const [held, setHeld] = useState(false);
     const [triggered, setTriggered] = useState(false);
@@ -18,6 +20,7 @@ const TitleButton=()=>{
     const OnReleased=()=>{
         setHeld(false);
         setTriggered(true);
+        setTimeout(() => setAppInitialized(true), 500);
     }
 
     var states = [
