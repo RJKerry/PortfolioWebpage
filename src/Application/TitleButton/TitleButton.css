@@ -1,0 +1,28 @@
+.Title {
+    opacity: 0;
+    font-size: 5vw;
+    transition: opacity 3s ease-in;
+}
+
+.Title.active {
+    opacity: 1;
+    transition: transform 0.75s ease-in-out;
+}
+
+.Title:hover {
+    transform: scale(1.66);
+    cursor: pointer;
+}
+
+.Title.click {
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.Title.click.held {
+    transform: scale(0.9);
+}
+
+.Title.click.released {
+    transform: scale(3);
+    opacity: 0;
+}
